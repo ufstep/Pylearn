@@ -1,7 +1,15 @@
-import struct
-import sys
-fileData = open('IQ.hex','rb')
+import numpy as np
+import matplotlib.pyplot as plt
+import os
 
-data_string = list(fileData.read(32))
+#def getsize('IQ.hex'):
+ #   st = os.stat('IQ.hex)
+  #  return st.st_size
 
-print (data_string)
+a = os.path.getsize('IQ.hex')
+print a ,"(byte)"
+
+f = np.fromfile('IQ.hex', dtype=np.int16, count=10) 
+print f
+
+
